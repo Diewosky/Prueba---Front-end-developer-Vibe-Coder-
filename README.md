@@ -2,10 +2,13 @@
 
 <div align="center">
   <h3>Visualiza, compara y convierte valores de divisas con una interfaz moderna y elegante</h3>
+  <p><em>Proyecto desarrollado como prueba técnica para la posición de Front-end Developer (Vibe Coder)</em></p>
 </div>
 
 ## Descripción
 InfoDivisas es una aplicación web desarrollada con React y Chakra UI que proporciona información en tiempo real sobre el valor del dólar y otras divisas en pesos chilenos (CLP). La aplicación permite visualizar el valor actual, consultar valores históricos, convertir entre divisas y visualizar la evolución del dólar a través de gráficos interactivos.
+
+Esta aplicación fue desarrollada como respuesta al desafío de crear una solución utilizando la API pública de [mindicador.cl](https://mindicador.cl/), combinando programación tradicional con el uso de inteligencia artificial para asistir en el proceso de desarrollo.
 
 ## Tecnologías Utilizadas
 - **React**: Biblioteca JavaScript para construir interfaces de usuario
@@ -13,6 +16,7 @@ InfoDivisas es una aplicación web desarrollada con React y Chakra UI que propor
 - **Chakra UI**: Sistema de diseño para React con componentes personalizables y accesibles
 - **Axios**: Cliente HTTP basado en promesas para realizar peticiones a API
 - **Framer Motion**: Biblioteca para animaciones fluidas y naturales
+- **Cursor**: IDE potenciado por IA que facilita la programación con asistencia inteligente
 
 ## Características
 - **Valor actual del dólar**: Muestra el valor actualizado del dólar en pesos chilenos
@@ -27,6 +31,71 @@ InfoDivisas es una aplicación web desarrollada con React y Chakra UI que propor
 - **Manejo de errores**: Visualización clara de estados de carga y errores
 - **Diseño responsivo**: Adaptado para móviles, tablets y escritorio
 - **Tema personalizado**: Sistema de diseño coherente con paleta de colores y componentes personalizados
+- **Logo personalizado**: SVG con gradientes y efectos visuales que representa la identidad de la aplicación
+
+## Uso de Inteligencia Artificial en el Desarrollo
+
+Esta aplicación fue desarrollada utilizando Inteligencia Artificial como herramienta de apoyo durante todo el proceso. Se emplearon principalmente:
+
+- **Claude (Anthropic)**: Para asistir en generación de código, planificación y diseño.
+- **Cursor**: Como IDE potenciado por IA que facilitó la codificación, autocompletado, y sugerencias en tiempo real.
+
+A continuación se detalla cómo la IA fue integrada al flujo de trabajo:
+
+### Planificación y Arquitectura
+- **Definición del concepto**: La IA ayudó a explorar ideas sobre qué tipo de aplicación crear con los datos de la API de mindicador.cl
+- **Planificación de componentes**: Se utilizó para definir la estructura de componentes y su jerarquía
+- **Selección de tecnologías**: Recomendaciones sobre qué tecnologías serían adecuadas (React, Chakra UI)
+
+### Desarrollo de Código
+- **Generación de código base**: Estructura inicial de componentes como DollarValue, CurrencyConverter y DollarBarChart
+- **Integración con API**: Código para realizar llamadas a la API y manejar las respuestas
+- **Manejo de estados**: Implementación de lógica para gestionar estados de los componentes
+- **Resolución de errores**: Diagnóstico y corrección de bugs durante el desarrollo
+
+### Diseño de UI/UX
+- **Sistema de diseño**: Definición de un tema personalizado para Chakra UI con paleta de colores, estilos y componentes
+- **Implementación de modo oscuro**: Adaptación de componentes para soportar tema claro y oscuro
+- **Efectos visuales**: Mejora de la experiencia del usuario con animaciones, transiciones y feedback visual
+- **Creación del logo**: Diseño de un SVG personalizado con gradientes y simbolismo relacionado con divisas
+
+### Mejoras y Optimizaciones
+- **Mejora de rendimiento**: Identificación de problemas potenciales y optimización del código
+- **Accesibilidad**: Sugerencias para mejorar la accesibilidad de la interfaz
+- **Depuración**: Ayuda para encontrar y corregir problemas en el código
+- **Documentación**: Asistencia en la creación de este README.md detallado
+
+### Flujo de Trabajo con IA
+1. **Planteamiento del problema o tarea**: Definir claramente qué se necesitaba desarrollar
+2. **Generación de soluciones**: La IA proponía diferentes enfoques o fragmentos de código
+3. **Evaluación y adaptación**: Revisión humana de las propuestas, seleccionando y adaptando según necesidades
+4. **Implementación y pruebas**: Integración del código y verificación de funcionamiento
+5. **Iteración**: Mejora continua basada en feedback y nuevas necesidades
+
+#### Herramientas de IA Utilizadas en el Flujo de Trabajo
+
+**Claude (Anthropic)**
+- Planificación de la arquitectura de la aplicación
+- Generación de componentes completos basados en requerimientos
+- Solución de problemas complejos de lógica
+- Creación de estilos y diseños visuales detallados
+- Optimización de código existente
+
+**Cursor IDE**
+- Autocompletado inteligente de código durante la programación
+- Explicación en tiempo real de código complejo
+- Sugerencias proactivas para mejoras y buenas prácticas
+- Debugging asistido de errores en el código
+- Refactorización inteligente de componentes
+- Búsqueda contextual en la base de código
+
+### Contribución Humana vs. IA
+- **Dirección creativa**: Las decisiones sobre el concepto, enfoque y estética fueron humanas
+- **Juicio crítico**: Evaluación de las propuestas de la IA y selección de las más adecuadas
+- **Integración y cohesión**: Asegurar que las diferentes partes trabajen juntas de manera armónica
+- **Testing y experiencia de usuario**: Evaluación de la usabilidad y funcionalidad real
+
+Esta metodología de trabajo permitió combinar las fortalezas de la IA (generación rápida de código, exploración de opciones) con el juicio humano (dirección creativa, toma de decisiones), resultando en un desarrollo más eficiente sin sacrificar calidad ni originalidad.
 
 ## Estructura del Proyecto
 ```
@@ -43,6 +112,8 @@ InfoDivisas es una aplicación web desarrollada con React y Chakra UI que propor
     helpers.js           # Funciones helper (formateo de fechas, etc.)
   /styles                # Estilos globales
     common.css           # Variables CSS y estilos comunes
+  /assets                # Recursos estáticos
+    logo.svg             # Logo de la aplicación en formato SVG
   theme.js               # Tema personalizado de Chakra UI
   App.jsx                # Componente principal de la aplicación
   App.css                # Estilos principales
@@ -136,6 +207,22 @@ Gráfico de barras interactivo para visualizar la evolución del dólar.
 - **Responsividad**: Diseño optimizado para diferentes dispositivos
 - **Accesibilidad**: Contraste adecuado, textos legibles y enfoque visible
 - **Gráficos mejorados**: Barras con gradientes y efectos de sombra según el modo
+
+## Reflexiones y Aprendizajes
+
+### Lo que se Aprendió
+- La combinación de programación tradicional e IA puede acelerar significativamente el desarrollo
+- Chakra UI proporciona un sistema de diseño robusto y flexible para crear interfaces modernas
+- La implementación adecuada del modo oscuro requiere un enfoque sistemático, no solo cambiar colores
+- La API de mindicador.cl ofrece datos valiosos que pueden presentarse de formas interactivas y útiles
+
+### Con Más Tiempo, se Hubiera Implementado
+- Gráficos más avanzados utilizando bibliotecas especializadas como Recharts o Nivo
+- Comparativas múltiples entre diferentes indicadores económicos
+- Exportación de datos a formatos como PDF o Excel
+- Sistema de notificaciones para cambios significativos en los valores
+- Tests unitarios y de integración para asegurar la robustez del código
+- Versión PWA para uso offline y mejor experiencia en móviles
 
 ## Instalación y Ejecución
 
@@ -244,39 +331,6 @@ npm run dev
 
 - Revisa la consola del navegador (F12) para ver errores.
 - La API puede experimentar ocasionalmente retrasos o errores, prueba usando un timeout más largo en las llamadas.
-
-### Contribuciones
-
-Si deseas contribuir, sigue estos pasos:
-
-1. Crea una nueva rama para tu característica:
-   ```bash
-   git checkout -b feature/nueva-caracteristica
-   ```
-
-2. Realiza tus cambios y haz commits:
-   ```bash
-   git add .
-   git commit -m "Añadida nueva característica: descripción"
-   ```
-
-3. Envía tus cambios al repositorio:
-   ```bash
-   git push origin feature/nueva-caracteristica
-   ```
-
-4. Crea un Pull Request detallando tus cambios.
-
-## Mejoras Futuras
-- Implementar gráficos avanzados con bibliotecas como Recharts o Nivo
-- Añadir más divisas internacionales para conversión
-- Perfeccionar el modo oscuro con temas personalizables
-- Añadir función de comparación entre múltiples indicadores
-- Desarrollar panel de favoritos para guardar conversiones frecuentes
-- Implementar notificaciones de cambios significativos en valores
-- Añadir pruebas unitarias y de integración
-- Convertir en PWA para uso offline
-- Almacenamiento de preferencias de usuario (modo oscuro, divisa preferida)
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
