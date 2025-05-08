@@ -1,0 +1,51 @@
+/* Extends the common button styles defined in common.css */
+
+/* If you need additional button types not defined in common.css */
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-small {
+  padding: 5px 10px;
+  font-size: 0.85rem;
+}
+
+.btn-large {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+}
+
+.custom-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.custom-button:hover {
+  transform: translateY(-2px);
+}
+
+.custom-button.primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.custom-button.secondary {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.custom-button.danger {
+  background-color: #e74c3c;
+  color: white;
+} 

@@ -1,0 +1,244 @@
+/* Common styles for consistent UI across the application */
+
+:root {
+  /* Color palette */
+  --primary-color: #3498db;
+  --primary-dark: #2980b9;
+  --secondary-color: #2ecc71;
+  --secondary-dark: #27ae60;
+  --danger-color: #e74c3c;
+  --danger-dark: #c0392b;
+  --neutral-dark: #2c3e50;
+  --neutral: #34495e;
+  --neutral-light: #7f8c8d;
+  --neutral-lighter: #95a5a6;
+  --bg-light: #f5f5f5;
+  --bg-white: #ffffff;
+  --bg-card: #f9f9f9;
+  --border-color: #ecf0f1;
+
+  /* Typography */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --h1-size: 2.5rem;
+  --h2-size: 1.8rem;
+  --h3-size: 1.4rem;
+  --body-size: 1rem;
+  --small-size: 0.9rem;
+
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --spacing-xl: 40px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  /* Border radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--neutral-dark);
+  line-height: 1.6;
+}
+
+/* Utility classes */
+.card {
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+  color: var(--neutral-dark);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--h2-size);
+}
+
+/* Loading and error states */
+.loading, .error, .empty-state {
+  text-align: center;
+  padding: var(--spacing-md);
+  font-size: var(--body-size);
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-md);
+  margin: var(--spacing-md) 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.loading {
+  color: var(--neutral);
+  position: relative;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid rgba(52, 152, 219, 0.3);
+  border-top-color: var(--primary-color);
+  animation: spin 1s infinite linear;
+  bottom: 15px;
+  left: calc(50% - 15px);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  color: var(--danger-color);
+  border-left: 4px solid var(--danger-color);
+}
+
+.error p {
+  margin-bottom: var(--spacing-md);
+}
+
+.empty-state {
+  color: var(--neutral-light);
+  border: 1px dashed var(--border-color);
+  background-color: var(--bg-card);
+  font-style: italic;
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Buttons */
+.btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-dark);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-dark);
+}
+
+/* Form elements */
+.form-control {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--neutral-dark);
+}
+
+.form-control input,
+.form-control select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--body-size);
+}
+
+.form-control input:focus,
+.form-control select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  :root {
+    --h1-size: 2rem;
+    --h2-size: 1.5rem;
+    --h3-size: 1.2rem;
+  }
+  
+  .card {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Clase común para todas las tarjetas para estandarizar su ancho */
+.card-container {
+  max-width: 900px !important; /* Usar el ancho de la tarjeta más ancha (barchart) */
+  width: 100%;
+  margin: 0 auto 2rem;
+  padding: var(--spacing-lg);
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  box-sizing: border-box;
+}
+
+/* Media queries para responsive */
+@media (max-width: 960px) {
+  .card-container {
+    max-width: 95% !important;
+    padding: var(--spacing-md);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    max-width: 100% !important;
+    padding: var(--spacing-sm);
+  }
+} 
