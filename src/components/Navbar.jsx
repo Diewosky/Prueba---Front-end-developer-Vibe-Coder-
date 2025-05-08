@@ -46,6 +46,14 @@ const Navbar = () => {
           justify="space-between"
         >
           <Flex alignItems="center">
+            <Image 
+              src="/logo.svg" 
+              alt="InfoDivisas Logo" 
+              boxSize="30px" 
+              mr={2} 
+              transition="transform 0.3s"
+              _hover={{ transform: 'scale(1.1)' }}
+            />
             <Text
               textAlign={{ base: 'center', md: 'left' }}
               fontFamily={'heading'}
