@@ -115,4 +115,15 @@ export const getIndicatorByYear = async (indicator = 'dolar', year) => {
   }
 };
 
+export const getDollarLast30Days = async () => {
+  try {
+    const response = await axios.get('https://mindicador.cl/api/dolar');
+    // Get last 30 values
+    return response.data.serie.slice(0, 30);
+  } catch (error) {
+    console.error('Error fetching dollar last 30 days:', error);
+    throw error;
+  }
+};
+
 export default api; 

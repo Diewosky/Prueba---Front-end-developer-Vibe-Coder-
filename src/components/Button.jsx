@@ -1,11 +1,18 @@
 import React from 'react';
-import './Button.css';
+import { Button as ChakraButton } from '@chakra-ui/react';
 
-const Button = ({ text, onClick, type = 'primary' }) => {
+const Button = ({ text, onClick, type = 'primary', disabled = false }) => {
+  const variant = type === 'primary' ? 'solid' : type === 'secondary' ? 'outline' : 'ghost';
+  
   return (
-    <button className={`btn btn-${type}`} onClick={onClick}>
+    <ChakraButton
+      onClick={onClick}
+      variant={variant}
+      isDisabled={disabled}
+      colorScheme="brand"
+    >
       {text}
-    </button>
+    </ChakraButton>
   );
 };
 
