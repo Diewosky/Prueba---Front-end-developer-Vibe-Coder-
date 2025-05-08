@@ -332,9 +332,6 @@ npm run dev
 - Revisa la consola del navegador (F12) para ver errores.
 - La API puede experimentar ocasionalmente retrasos o errores, prueba usando un timeout más largo en las llamadas.
 
-## Licencia
-Este proyecto está bajo la Licencia MIT. Ver el archivo LICENSE para más detalles.
-
 ## Autor
 Diego Gutierrez
 
