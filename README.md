@@ -224,6 +224,11 @@ Gráfico de barras interactivo para visualizar la evolución del dólar.
 - Tests unitarios y de integración para asegurar la robustez del código
 - Versión PWA para uso offline y mejor experiencia en móviles
 
+## Aplicación en Vivo
+Esta aplicación ha sido desplegada en Azure Static Web Apps y está disponible en el siguiente enlace:
+
+**[InfoDivisas en Azure](https://wonderful-plant-00313591e.6.azurestaticapps.net/)**
+
 ## Instalación y Ejecución
 
 ### Requisitos Previos
