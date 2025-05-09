@@ -33,7 +33,6 @@ const DollarBarChart = () => {
   const dateColor = useColorModeValue('gray.600', 'gray.400');
   const tooltipBg = useColorModeValue('brand.500', 'brand.600');
   const valueBoxBg = useColorModeValue('brand.500', 'brand.400');
-  const latestValueColor = useColorModeValue('brand.500', 'brand.300');
   const barGradient = useColorModeValue(
     "linear(to-t, brand.400, brand.600)", 
     "linear(to-t, brand.500, accent.400)"
@@ -302,20 +301,17 @@ const DollarBarChart = () => {
                         </Box>
                       )}
                     </Box>
-                    <Text 
-                      fontSize="xs" 
-                      fontWeight="medium"
-                      color={isLatest ? latestValueColor : dateColor}
-                      mt={1}
-                      transform="rotate(-45deg)"
-                      transformOrigin="top left"
-                      position="absolute"
-                      bottom="-25px"
-                      left="50%"
-                      width="40px"
-                    >
-                      {formattedDate}
-                    </Text>
+                    <VStack spacing={0} align="center" position="absolute" bottom="-25px" left="50%" transform="translateX(-50%)">
+                      <Text 
+                        fontSize="xs" 
+                        color={dateColor}
+                        fontWeight="medium"
+                        whiteSpace="nowrap"
+                        transform="rotate(0deg)"
+                      >
+                        {formattedDate}
+                      </Text>
+                    </VStack>
                   </VStack>
                 </Tooltip>
               );
