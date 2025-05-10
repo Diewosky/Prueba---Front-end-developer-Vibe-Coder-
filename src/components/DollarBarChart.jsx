@@ -222,6 +222,8 @@ const DollarBarChart = () => {
                   fontSize="xs" 
                   color={textColor} 
                   fontWeight="medium"
+                  whiteSpace="nowrap"
+                  width="100%"
                 >
                   ${value.toFixed(0)}
                 </Text>
