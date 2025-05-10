@@ -47,6 +47,9 @@ const DollarValue = () => {
   const boxShadow = useColorModeValue('lg', 'dark-lg');
   const highlightBg = useColorModeValue('gray.50', 'gray.700');
   const inputBg = useColorModeValue('white', 'gray.700');
+  // Nuevos colores para los botones de selección
+  const inactiveBgColor = useColorModeValue('gray.100', 'gray.700');
+  const inactiveHoverBgColor = useColorModeValue('gray.200', 'gray.600');
 
   const fetchIndicators = async () => {
     try {
@@ -547,15 +550,66 @@ const DollarValue = () => {
         <RadioGroup 
           onChange={handleComparisonTypeChange} 
           value={comparisonType}
-          mb={4}
+          mb={3}
         >
           <Stack 
             direction={{ base: "column", sm: "row" }} 
-            spacing={{ base: 2, sm: 6 }} 
+            spacing={{ base: 2, sm: 3 }} 
             justify="center"
+            width="full"
+            maxW={{ sm: "450px" }}
+            mx="auto"
           >
-            <Radio value="date" colorScheme="brand" size="lg">Por fecha específica</Radio>
-            <Radio value="year" colorScheme="brand" size="lg">Por año</Radio>
+            <Box 
+              as="button"
+              onClick={() => handleComparisonTypeChange('date')}
+              px={3}
+              py={2}
+              borderRadius="md"
+              width={{ base: "full", sm: "50%" }}
+              maxW={{ sm: "200px" }}
+              bg={comparisonType === 'date' ? 'brand.500' : inactiveBgColor}
+              color={comparisonType === 'date' ? 'white' : textColor}
+              fontWeight="medium"
+              fontSize="sm"
+              transition="all 0.2s"
+              _hover={{
+                bg: comparisonType === 'date' 
+                  ? 'brand.600' 
+                  : inactiveHoverBgColor
+              }}
+              border="1px solid"
+              borderColor={comparisonType === 'date' ? 'brand.500' : 'transparent'}
+              boxShadow={comparisonType === 'date' ? 'sm' : 'none'}
+              transform={comparisonType === 'date' ? 'translateY(-1px)' : 'none'}
+            >
+              Por fecha específica
+            </Box>
+            <Box 
+              as="button"
+              onClick={() => handleComparisonTypeChange('year')}
+              px={3}
+              py={2}
+              borderRadius="md"
+              width={{ base: "full", sm: "50%" }}
+              maxW={{ sm: "200px" }}
+              bg={comparisonType === 'year' ? 'brand.500' : inactiveBgColor}
+              color={comparisonType === 'year' ? 'white' : textColor}
+              fontWeight="medium"
+              fontSize="sm"
+              transition="all 0.2s"
+              _hover={{
+                bg: comparisonType === 'year' 
+                  ? 'brand.600' 
+                  : inactiveHoverBgColor
+              }}
+              border="1px solid"
+              borderColor={comparisonType === 'year' ? 'brand.500' : 'transparent'}
+              boxShadow={comparisonType === 'year' ? 'sm' : 'none'}
+              transform={comparisonType === 'year' ? 'translateY(-1px)' : 'none'}
+            >
+              Por año
+            </Box>
           </Stack>
         </RadioGroup>
         
