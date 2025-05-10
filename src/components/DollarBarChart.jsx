@@ -285,7 +285,7 @@ const DollarBarChart = () => {
                       {isLatest && (
                         <Box
                           position="absolute"
-                          top="-8px"
+                          top="-25px"
                           left="50%"
                           transform="translateX(-50%)"
                           bg={valueBoxBg}
@@ -296,6 +296,7 @@ const DollarBarChart = () => {
                           py={1}
                           borderRadius="md"
                           whiteSpace="nowrap"
+                          boxShadow="sm"
                         >
                           ${item.valor.toFixed(0)}
                         </Box>
