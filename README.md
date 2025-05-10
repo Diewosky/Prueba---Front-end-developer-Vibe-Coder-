@@ -10,12 +10,17 @@ InfoDivisas es una aplicación web desarrollada con React y Chakra UI que propor
 
 Esta aplicación fue desarrollada como respuesta al desafío de crear una solución utilizando la API pública de [mindicador.cl](https://mindicador.cl/), combinando programación tradicional con el uso de inteligencia artificial para asistir en el proceso de desarrollo.
 
+## Aplicación en Vivo
+Esta aplicación ha sido desplegada en Azure Static Web Apps y está disponible en el siguiente enlace:
+
+**[InfoDivisas en Azure](https://wonderful-plant-00313591e.6.azurestaticapps.net/)**
+
 ## Tecnologías Utilizadas
-- **React**: Biblioteca JavaScript para construir interfaces de usuario
-- **Vite**: Herramienta de compilación y desarrollo que proporciona un entorno de desarrollo rápido
-- **Chakra UI**: Sistema de diseño para React con componentes personalizables y accesibles
-- **Axios**: Cliente HTTP basado en promesas para realizar peticiones a API
-- **Framer Motion**: Biblioteca para animaciones fluidas y naturales
+- **React**: v19.1.0 - Biblioteca JavaScript para construir interfaces de usuario
+- **Vite**: v6.3.5 - Herramienta de compilación y desarrollo que proporciona un entorno de desarrollo rápido
+- **Chakra UI**: v2.8.2 - Sistema de diseño para React con componentes personalizables y accesibles
+- **Axios**: v1.9.0 - Cliente HTTP basado en promesas para realizar peticiones a API
+- **Framer Motion**: v11.13.5 - Biblioteca para animaciones fluidas y naturales
 - **Cursor**: IDE potenciado por IA que facilita la programación con asistencia inteligente
 
 ## Características
@@ -59,11 +64,11 @@ A continuación se detalla cómo la IA fue integrada al flujo de trabajo:
 - **Efectos visuales**: Mejora de la experiencia del usuario con animaciones, transiciones y feedback visual
 - **Creación del logo**: Diseño de un SVG personalizado con gradientes y simbolismo relacionado con divisas
 
-### Mejoras y Optimizaciones
-- **Mejora de rendimiento**: Identificación de problemas potenciales y optimización del código
-- **Accesibilidad**: Sugerencias para mejorar la accesibilidad de la interfaz
-- **Depuración**: Ayuda para encontrar y corregir problemas en el código
-- **Documentación**: Asistencia en la creación de este README.md detallado
+### Adaptaciones y Mejoras Realizadas
+- **Selección mejorada**: Implementación de botones modernos para la comparación de valores históricos
+- **Visualización optimizada**: Mejora en la presentación de los valores del dólar en el gráfico de barras
+- **Correcciones de UI**: Solución de problemas con etiquetas de ejes en el gráfico histórico
+- **Compatibilidad**: Resolución de problemas de compatibilidad entre las dependencias y React 19
 
 ### Flujo de Trabajo con IA
 1. **Planteamiento del problema o tarea**: Definir claramente qué se necesitaba desarrollar
@@ -71,31 +76,6 @@ A continuación se detalla cómo la IA fue integrada al flujo de trabajo:
 3. **Evaluación y adaptación**: Revisión humana de las propuestas, seleccionando y adaptando según necesidades
 4. **Implementación y pruebas**: Integración del código y verificación de funcionamiento
 5. **Iteración**: Mejora continua basada en feedback y nuevas necesidades
-
-#### Herramientas de IA Utilizadas en el Flujo de Trabajo
-
-**Claude (Anthropic)**
-- Planificación de la arquitectura de la aplicación
-- Generación de componentes completos basados en requerimientos
-- Solución de problemas complejos de lógica
-- Creación de estilos y diseños visuales detallados
-- Optimización de código existente
-
-**Cursor IDE**
-- Autocompletado inteligente de código durante la programación
-- Explicación en tiempo real de código complejo
-- Sugerencias proactivas para mejoras y buenas prácticas
-- Debugging asistido de errores en el código
-- Refactorización inteligente de componentes
-- Búsqueda contextual en la base de código
-
-### Contribución Humana vs. IA
-- **Dirección creativa**: Las decisiones sobre el concepto, enfoque y estética fueron humanas
-- **Juicio crítico**: Evaluación de las propuestas de la IA y selección de las más adecuadas
-- **Integración y cohesión**: Asegurar que las diferentes partes trabajen juntas de manera armónica
-- **Testing y experiencia de usuario**: Evaluación de la usabilidad y funcionalidad real
-
-Esta metodología de trabajo permitió combinar las fortalezas de la IA (generación rápida de código, exploración de opciones) con el juicio humano (dirección creativa, toma de decisiones), resultando en un desarrollo más eficiente sin sacrificar calidad ni originalidad.
 
 ## Estructura del Proyecto
 ```
@@ -170,7 +150,7 @@ Muestra el valor actual del dólar y permite compararlo con valores históricos.
 **Funcionalidades:**
 - Visualización del valor actual con fecha de actualización
 - Selector de indicadores (dólar, euro, UF, etc.)
-- Comparación por fecha específica o por año
+- Comparación por fecha específica o por año con botones modernos
 - Cálculo de variación porcentual y absoluta
 - Indicadores visuales de aumento o disminución
 - Diseño optimizado con números más grandes y centrados
@@ -195,7 +175,13 @@ Gráfico de barras interactivo para visualizar la evolución del dólar.
 - Panel de estadísticas con valores promedio, máximo, mínimo y variación
 - Botón de actualización para refrescar datos
 - Optimizado para modo oscuro con colores y contrastes mejorados
-- Efectos visuales adaptados para ambos modos
+- Etiquetas de fecha horizontales para mejor legibilidad
+
+## Despliegue en Azure
+
+Esta aplicación está desplegada en Azure Static Web Apps, ofreciendo un despliegue continuo desde GitHub.
+
+El código fuente se mantiene en GitHub y cada push al repositorio activa automáticamente un nuevo despliegue a través de GitHub Actions.
 
 ## Mejoras de UI/UX Implementadas
 - **Modo Oscuro Completo**: Sistema que adapta colores, contrastes y elementos visuales
@@ -207,6 +193,7 @@ Gráfico de barras interactivo para visualizar la evolución del dólar.
 - **Responsividad**: Diseño optimizado para diferentes dispositivos
 - **Accesibilidad**: Contraste adecuado, textos legibles y enfoque visible
 - **Gráficos mejorados**: Barras con gradientes y efectos de sombra según el modo
+- **Botones modernos**: Selección de tipo de comparación con botones tipo toggle
 
 ## Reflexiones y Aprendizajes
 
@@ -215,6 +202,7 @@ Gráfico de barras interactivo para visualizar la evolución del dólar.
 - Chakra UI proporciona un sistema de diseño robusto y flexible para crear interfaces modernas
 - La implementación adecuada del modo oscuro requiere un enfoque sistemático, no solo cambiar colores
 - La API de mindicador.cl ofrece datos valiosos que pueden presentarse de formas interactivas y útiles
+- El despliegue en Azure Static Web Apps simplifica considerablemente el proceso de publicación
 
 ### Con Más Tiempo, se Hubiera Implementado
 - Gráficos más avanzados utilizando bibliotecas especializadas como Recharts o Nivo
@@ -224,22 +212,17 @@ Gráfico de barras interactivo para visualizar la evolución del dólar.
 - Tests unitarios y de integración para asegurar la robustez del código
 - Versión PWA para uso offline y mejor experiencia en móviles
 
-## Aplicación en Vivo
-Esta aplicación ha sido desplegada en Azure Static Web Apps y está disponible en el siguiente enlace:
-
-**[InfoDivisas en Azure](https://wonderful-plant-00313591e.6.azurestaticapps.net/)**
-
 ## Instalación y Ejecución
 
 ### Requisitos Previos
-- Node.js (v14.0.0 o superior)
-- npm (v6.0.0 o superior)
+- Node.js (v16.0.0 o superior)
+- npm (v8.0.0 o superior)
 
 ### Pasos para Instalación
 1. Clonar el repositorio:
    ```
-   git clone [URL del repositorio]
-   cd infodivisas
+   git clone https://github.com/Diewosky/Prueba---Front-end-developer-Vibe-Coder-.git
+   cd Prueba---Front-end-developer-Vibe-Coder-
    ```
 
 2. Instalar dependencias:
@@ -260,82 +243,6 @@ npm run build
 ```
 
 Los archivos compilados se generarán en la carpeta `dist/`.
-
-## Guía para Nuevos Colaboradores
-
-Si has clonado este repositorio y quieres comenzar a trabajar en él, sigue esta guía para una configuración rápida:
-
-### Configuración Inicial
-
-1. **Verifica la versión de Node.js**:
-   ```bash
-   node -v
-   ```
-   Asegúrate de tener Node.js v14.0.0 o superior. Si necesitas actualizar, visita [nodejs.org](https://nodejs.org/).
-
-2. **Instala las dependencias**:
-   ```bash
-   npm install
-   ```
-   Este comando instalará todas las dependencias necesarias, incluyendo React, Chakra UI y otras bibliotecas.
-
-3. **Posibles Problemas de Compatibilidad**:
-   - Si estás usando React 19, podrías encontrar problemas de compatibilidad con algunas bibliotecas.
-   - En ese caso, utiliza `--legacy-peer-deps`:
-     ```bash
-     npm install --legacy-peer-deps
-     ```
-
-### Estructura de Archivos Clave
-
-- **`src/theme.js`**: Define todo el sistema de diseño personalizado de Chakra UI.
-- **`src/components/`**: Contiene todos los componentes React.
-- **`src/services/api.js`**: Contiene las funciones para comunicarse con la API.
-
-### Ejecutar la Aplicación
-
-```bash
-npm run dev
-```
-
-### Modificaciones Comunes
-
-1. **Actualizar el Tema**:
-   - Edita `src/theme.js` para modificar colores, tipografía o componentes.
-   - Ejemplo para modificar un color:
-     ```javascript
-     const colors = {
-       brand: {
-         // Modificar los colores aquí
-         500: '#0088FF',  // Color principal
-       }
-     }
-     ```
-
-2. **Añadir un Nuevo Componente**:
-   - Crea un nuevo archivo en `src/components/`
-   - Importa los componentes de Chakra UI necesarios
-   - Conecta con la API si es necesario
-
-3. **Modificar la API**:
-   - En `src/services/api.js` puedes añadir nuevas funciones para obtener datos adicionales
-   - Ejemplo para añadir un nuevo endpoint:
-     ```javascript
-     export const getNewIndicator = async (indicatorName) => {
-       try {
-         const response = await axios.get(`https://mindicador.cl/api/${indicatorName}`);
-         return response.data;
-       } catch (error) {
-         console.error(`Error fetching ${indicatorName}:`, error);
-         throw error;
-       }
-     };
-     ```
-
-### Depuración
-
-- Revisa la consola del navegador (F12) para ver errores.
-- La API puede experimentar ocasionalmente retrasos o errores, prueba usando un timeout más largo en las llamadas.
 
 ## Autor
 Diego Gutierrez
