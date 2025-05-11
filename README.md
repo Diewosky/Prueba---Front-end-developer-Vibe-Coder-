@@ -38,6 +38,26 @@ Esta aplicación ha sido desplegada en Azure Static Web Apps y está disponible 
 - **Tema personalizado**: Sistema de diseño coherente con paleta de colores y componentes personalizados
 - **Logo personalizado**: SVG con gradientes y efectos visuales que representa la identidad de la aplicación
 
+## Capturas de Pantalla
+
+### Interfaz Principal
+![Interfaz Principal](/public/1.png)
+
+### Conversor de Moneda
+![Conversor de Moneda](/public/conversorMoneda.png)
+
+### Gráfico del Dólar
+![Gráfico del Dólar](/public/graficoDolar.png)
+
+### Modo Noche
+![Modo Noche](/public/modoNoche.png)
+
+### Valor Histórico por Año
+![Valor Histórico por Año](/public/valorHistoricoAno.png)
+
+### Valor Histórico por Fecha
+![Valor Histórico por Fecha](/public/valorHistoricoFecha.png)
+
 ## Uso de Inteligencia Artificial en el Desarrollo
 
 Esta aplicación fue desarrollada utilizando Inteligencia Artificial como herramienta de apoyo durante todo el proceso. Se emplearon principalmente:
